@@ -10,13 +10,15 @@ import com.jhnfrankz.backend.cartapp.backendcartapp.repositories.ProductReposito
 
 @Service
 public class ProductServiceImpl implements ProductService {
-
-    @Autowired // esto es para que se inyecte la dependencia, es decir, que se cree una instancia de ProductRepository y se guarde en la variable repository, nos ahorramos el new ProductRepository()
+    // esto es para que se inyecte la dependencia, es decir, que se cree una
+    // instancia de ProductRepository y se guarde en la variable repository, nos
+    // ahorramos el new ProductRepository()
+    @Autowired
     private ProductRepository repository;
 
     @Override
     public List<Product> findAll() {
-        return (List<Product>)repository.findAll();
+        return (List<Product>) repository.findAll();
     }
-    
+
 }
